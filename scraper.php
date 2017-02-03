@@ -18,7 +18,9 @@ for($i=0;$i<=$max_loop;$i++){
  //*[contains(@class, '$classname')]
  
  $r = $dom->find("a.vip['title']");
- print $r[0]->plaintext. "<br>";
+// print $r[0]->plaintext. "<br>";
+$text = convert_html_to_text($r); 
+echo $text;
  //echo $dom->find("h3 [class='lvtitle'] a");
  //print_r($dom->find("h3[class='lvtitle'] a"));
  //scraperwiki::save_sqlite(array('name'), array('name' => $r[0]));
