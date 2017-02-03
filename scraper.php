@@ -59,7 +59,7 @@ for($i=0;$i<=$max_loop;$i++){
  $product_price = preg_replace(array('"<a href(.*?)>"', '"</a>"'), array('',''), $m[$i]);
  //echo "Product Title" . $product_title . "<br>";
  echo "Product Price" . $product_price . "<br>";
- html2text($r[$i]);
+ return preg_replace($Rules, $Replace, $r[$i]);
  
  
 }
