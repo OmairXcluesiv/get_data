@@ -23,5 +23,5 @@ for($i=0;$i<=$max_loop;$i++){
  $no_ws =  preg_replace('/\s+/', '', $p_text);
  echo "Product Price:"  . $no_ws . "\n\n\n\n\n";
 }
-echo $count;
+echo "<h5>Total Data Found: <h5>" ."<h2>". $count . "<h2>";
 ?>
