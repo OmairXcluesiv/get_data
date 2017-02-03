@@ -54,13 +54,12 @@ for($i=0;$i<=$max_loop;$i++){
  //echo "Product Title :" . $r[$i] . "\n";
  //echo "Product Price: " . $m[0] . "<br>";
  
-  
  $product_title = preg_replace(array('"<a (.*?)>"', '"</a>"'), array('',''),  $r[$i]);
  $product_price = preg_replace(array('"<a href(.*?)>"', '"</a>"'), array('',''), $m[$i]);
  //echo "Product Title" . $product_title . "<br>";
  echo "Product Price" . $product_price . "<br>";
  //echo preg_replace($Rules, $Replace, $r[$i]);
- html2text($r[$i]) ;
+ echo html_entity_decode($r[$i]);
  
  
 }
