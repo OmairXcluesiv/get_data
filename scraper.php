@@ -18,10 +18,12 @@ $r = $dom->find("h3.lvtitle");
  echo $r[0]. "<br>";
  //echo $dom->find("h3 [class='lvtitle'] a");
  //print_r($dom->find("h3[class='lvtitle'] a"));
+ scraperwiki::save_sqlite(array('name'), array('name' => $r[0]));
+ craperwiki::select("* from data");
 }
 //
 // // Write out to the sqlite database using scraperwiki library
-// scraperwiki::save_sqlite(array('name'), array('name' => 'susan', 'occupation' => 'software developer'));
+
 //
 // // An arbitrary query against the database
 // scraperwiki::select("* from data where 'name'='peter'")
