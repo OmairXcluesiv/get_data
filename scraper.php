@@ -18,7 +18,7 @@ for($i=0;$i<=$max_loop;$i++){
  //$r = $dom->find("h3.lvtitle");
  //*[contains(@class, '$classname')]
  
- $r = $dom->find("a.vip['title']");
+ $r = $dom->find("a.vip");
  
 echo strip_tags($r);
 echo "\n";
