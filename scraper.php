@@ -18,32 +18,6 @@ for($i=0;$i<=$max_loop;$i++){
  
  $r = $dom->find("a.vip");
  //echo strip_tags($r[0]). "<br>";
- return $r[0];
+ echo $r[$i];
 }
- 
-
-
-// print $r[0]->plaintext. "<br>";
-
-
- //echo $dom->find("h3 [class='lvtitle'] a");
- //print_r($dom->find("h3[class='lvtitle'] a"));
- //scraperwiki::save_sqlite(array('name'), array('name' => $r[0]));
- //scraperwiki::select("* from data");
-
-//
-// // Write out to the sqlite database using scraperwiki library
-
-//
-// // An arbitrary query against the database
-// scraperwiki::select("* from data where 'name'='peter'")
-
-// You don't have to do things with the ScraperWiki library.
-// You can use whatever libraries you want: https://morph.io/documentation/php
-// All that matters is that your final data is written to an SQLite database
-// called "data.sqlite" in the current working directory which has at least a table
-// called "data".
-
-
-
 ?>
