@@ -60,7 +60,7 @@ for($i=0;$i<=$max_loop;$i++){
  //echo "Product Title" . $product_title . "<br>";
  echo "Product Price" . $product_price . "<br>";
  //echo preg_replace($Rules, $Replace, $r[$i]);
- echo html2text($r[$i]) ;
+ html2text($r[$i]) ;
  
  
 }
