@@ -19,7 +19,7 @@ $r = $dom->find("h3.lvtitle");
  //echo $dom->find("h3 [class='lvtitle'] a");
  //print_r($dom->find("h3[class='lvtitle'] a"));
  scraperwiki::save_sqlite(array('name'), array('name' => $r[0]));
- craperwiki::select("* from data");
+ scraperwiki::select("* from data");
 }
 //
 // // Write out to the sqlite database using scraperwiki library
