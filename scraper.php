@@ -19,41 +19,11 @@ for($i=0;$i<=$max_loop;$i++){
  //*[contains(@class, '$classname')]
  
  $r = $dom->find("a.vip['title']");
+ $myHtml = $r;
+echo (new Parser())->parseString($myHtml);
 // print $r[0]->plaintext. "<br>";
 
- function html2text($r) {
-    $Rules = array ('@<script[^>]*?>.*?</script>@si',
-                    '@<[\/\!]*?[^<>]*?>@si',
-                    '@([\r\n])[\s]+@',
-                    '@&(quot|#34);@i',
-                    '@&(amp|#38);@i',
-                    '@&(lt|#60);@i',
-                    '@&(gt|#62);@i',
-                    '@&(nbsp|#160);@i',
-                    '@&(iexcl|#161);@i',
-                    '@&(cent|#162);@i',
-                    '@&(pound|#163);@i',
-                    '@&(copy|#169);@i',
-                    '@&(reg|#174);@i',
-                    '@&#(d+);@e'
-             );
-    $Replace = array ('',
-                      '',
-                      '',
-                      '',
-                      '&',
-                      '<',
-                      '>',
-                      ' ',
-                      chr(161),
-                      chr(162),
-                      chr(163),
-                      chr(169),
-                      chr(174),
-                      'chr()'
-                );
-  return preg_replace($Rules, $Replace, $r);
-}
+
  //echo $dom->find("h3 [class='lvtitle'] a");
  //print_r($dom->find("h3[class='lvtitle'] a"));
  //scraperwiki::save_sqlite(array('name'), array('name' => $r[0]));
