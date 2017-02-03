@@ -7,7 +7,7 @@ $scraper = scraperwiki::scrap("https://www.olx.com.pk/cars/");
 
 $scraper_obj = new simple_html_dom();
 
-simple_html_dom->load($scraper);
+$scraper_obj->load($scraper);
 
 print_r($scraper_obj->find("h3 [class='large lheight20 margintop10']) a");
 
