@@ -1,4 +1,18 @@
 <?
+
+require 'scraperwiki.php';
+require 'scraperwiki/simple_html_dom.php';
+
+$scraper = scraperwiki::scrap("https://www.olx.com.pk/cars/");
+
+$scraper_obj = new simple_html_dom();
+
+simple_html_dom->load($scraper);
+
+print_r($scraper_obj->find("h3 [class='large lheight20 margintop10']) a");
+
+
+
 // This is a template for a PHP scraper on morph.io (https://morph.io)
 // including some code snippets below that you should find helpful
 
