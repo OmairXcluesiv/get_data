@@ -59,7 +59,8 @@ for($i=0;$i<=$max_loop;$i++){
  //echo "Product Title" . $product_title . "<br>";
  echo "Product Price" . $product_price . "<br>";
  //echo preg_replace($Rules, $Replace, $r[$i]);
- echo "Product Title: " strip_tags($r[$i]);
+ echo "Product Title: " . strip_tags($r[$i]);
+ 
  
  
 }
