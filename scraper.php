@@ -18,9 +18,11 @@ for($i=0;$i<=$max_loop;$i++){
  $r = $dom->find("a.vip");
  $m = $dom->find("li.lvprice");
  //echo strip_tags($r[0]). "<br>";
- echo "Product Title :" . $r[$i] . "\n";
+ //echo "Product Title :" . $r[$i] . "\n";
  //echo "Product Price: " . $m[0] . "<br>";
- $content = preg_replace(array('"<a href(.*?)>"', '"</a>"'), array('',''), $m[$i]);
- echo $content;
+ $product_title = preg_replace(array('"<a href(.*?)>"', '"</a>"'), array('',''), $r[$i]);
+ $product_price = preg_replace(array('"<a href(.*?)>"', '"</a>"'), array('',''), $m[$i]);
+ echo "Product Title" . $product_title . "<br>";
+ echo "Product Price" . $product_price . "<br>";
 }
 ?>
