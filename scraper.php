@@ -19,8 +19,8 @@ for($i=0;$i<=$max_loop;$i++){
  //*[contains(@class, '$classname')]
  
  $r = $dom->find("a.vip['title']");
- $myHtml = $r;
-echo (new Parser())->parseString($myHtml);
+ $str = $r;
+echo html_entity_decode($str);
 // print $r[0]->plaintext. "<br>";
 
 
