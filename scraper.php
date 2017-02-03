@@ -16,9 +16,9 @@ for($i=0;$i<=$max_loop;$i++){
  //$r = $dom->find("h3.lvtitle");
  //*[contains(@class, '$classname')] 
  $r = $dom->find("a.vip");
+ $m = $dom->find("li.lvprice");
  //echo strip_tags($r[0]). "<br>";
- echo $r[$i] . "\n";
- 
-echo "<br><br><br>";
+ echo "Product Title :" . $r[$i] . "\n";
+ echo "Product Price: " . $m[0] . "<br>"
 }
 ?>
