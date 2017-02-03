@@ -6,12 +6,12 @@ require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 //
 // // Read in a page
- $html = scraperwiki::scrape("https://www.olx.com.pk/cars/");
+ $html = scraperwiki::scrape("http://www.ebay.com/sch/i.html?_from=R40&_trksid=p2050601.m570.l1313.TR0.TRC0.H0.XAmerican+Revolutionary+War&_nkw=American+Revolutionary+War&_sacat=0");
 //
 // // Find something on the page using css selectors
 $dom = new simple_html_dom();
 $dom->load($html);
-print_r($dom->find("h3.large lheight20 margintop10"));
+print_r($dom->find("h3[class='lvtitle'] a"));
 //
 // // Write out to the sqlite database using scraperwiki library
 // scraperwiki::save_sqlite(array('name'), array('name' => 'susan', 'occupation' => 'software developer'));
