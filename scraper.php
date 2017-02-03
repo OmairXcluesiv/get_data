@@ -20,7 +20,9 @@ for($i=0;$i<=$max_loop;$i++){
  //echo strip_tags($r[0]). "<br>";
  //echo "Product Title :" . $r[$i] . "\n";
  //echo "Product Price: " . $m[0] . "<br>";
- $product_title = preg_replace(array('"<a href(.*?)>"', '"</a>"'), array('',''), $r[$i]);
+ 
+  
+ $product_title = preg_replace(array('"<a (.*?)>"', '"</a>"'), array('',''),  $r[$i]);
  $product_price = preg_replace(array('"<a href(.*?)>"', '"</a>"'), array('',''), $m[$i]);
  echo "Product Title" . $product_title . "<br>";
  echo "Product Price" . $product_price . "<br>";
