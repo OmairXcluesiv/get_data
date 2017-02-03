@@ -19,13 +19,8 @@ for($i=0;$i<=$max_loop;$i++){
  //*[contains(@class, '$classname')]
  
  $r = $dom->find("a.vip");
- 
-echo strip_tags($r);
-echo "\n";
+ echo $r;
 
-// Allow <p> and <a>
-echo strip_tags($r, '<p><a>');
- 
 // print $r[0]->plaintext. "<br>";
 
 
