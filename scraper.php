@@ -52,7 +52,7 @@ for($i=0;$i<=$max_loop;$i++){
  //print_r($dom->find("h3[class='lvtitle'] a"));
  //scraperwiki::save_sqlite(array('name'), array('name' => $r[0]));
  //scraperwiki::select("* from data");
-}
+
 //
 // // Write out to the sqlite database using scraperwiki library
 
