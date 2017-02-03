@@ -11,7 +11,7 @@ require 'scraperwiki/simple_html_dom.php';
 // // Find something on the page using css selectors
 $max_loop = 5;
 
-for($i=0;$i<=$max_loop;i++){
+for($i=0;$i<=$max_loop;$i++){
  $dom = new simple_html_dom();
  $dom->load($html);
  print_r($dom->find("h3[class='lvtitle'] a"));
