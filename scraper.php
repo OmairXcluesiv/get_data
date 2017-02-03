@@ -15,12 +15,14 @@ for($i=0;$i<=$max_loop;$i++){
  $dom = new simple_html_dom();
  $dom->load($html);
  //$r = $dom->find("h3.lvtitle");
+ //*[contains(@class, '$classname')]
+ 
  $r = $dom->find("a.vip['title']");
- echo $r[0]. "<br>";
+ print $r[0]->plaintext. "<br>";
  //echo $dom->find("h3 [class='lvtitle'] a");
  //print_r($dom->find("h3[class='lvtitle'] a"));
- scraperwiki::save_sqlite(array('name'), array('name' => $r[0]));
- scraperwiki::select("* from data");
+ //scraperwiki::save_sqlite(array('name'), array('name' => $r[0]));
+ //scraperwiki::select("* from data");
 }
 //
 // // Write out to the sqlite database using scraperwiki library
