@@ -60,7 +60,10 @@ for($i=0;$i<=$max_loop;$i++){
 // echo "Product Price" . $product_price . "<br>";
  //echo preg_replace($Rules, $Replace, $r[$i]);
  echo "Product Title: " . strip_tags($r[$i]) . "\n";
- echo "Product Price:"  . strip_tags($m[$i]) . "\n\n\n\n\n";
+ str_replace(' ', '', $old_str);
+ $p_text = strip_tags($m[$i]) 
+ $no_ws = str_replace(' ','', $p_text );
+ echo "Product Price:"  . $no_ws . "\n\n\n\n\n";
  
  
  
