@@ -21,5 +21,6 @@ for($i=0;$i<=$max_loop;$i++){
  echo "Product Title :" . $r[$i] . "\n";
  //echo "Product Price: " . $m[0] . "<br>";
  $content = preg_replace(array('"<a href(.*?)>"', '"</a>"'), array('',''), $m[$i]);
+ echo $content;
 }
 ?>
