@@ -9,7 +9,7 @@ $scraper_obj = new simple_html_dom();
 
 $scraper_obj->load($scraper);
 
-print_r($scraper_obj->find("h3 [class='large lheight20 margintop10']) a");
+print_r($scraper_obj->find("h3 [class='large lheight20 margintop10'] a"));
 
 
 
