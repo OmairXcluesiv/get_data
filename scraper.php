@@ -15,7 +15,7 @@ for($i=0;$i<=$max_loop;$i++){
  $dom = new simple_html_dom();
  $dom->load($html);
 $r = $dom->find("h3.lvtitle");
- echo $r['title']. "<br>";
+ echo $r[0]. "<br>";
  //echo $dom->find("h3 [class='lvtitle'] a");
  //print_r($dom->find("h3[class='lvtitle'] a"));
 }
