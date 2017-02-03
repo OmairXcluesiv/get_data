@@ -19,7 +19,7 @@ for($i=0;$i<=$max_loop;$i++){
  //*[contains(@class, '$classname')]
  
  $r = $dom->find("a.vip");
- echo strip_tags($r[0]);
+ echo strip_tags($r[0]). "<br>";
 
 
 // print $r[0]->plaintext. "<br>";
