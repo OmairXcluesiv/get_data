@@ -57,9 +57,10 @@ for($i=0;$i<=$max_loop;$i++){
  $product_title = preg_replace(array('"<a (.*?)>"', '"</a>"'), array('',''),  $r[$i]);
  $product_price = preg_replace(array('"<a href(.*?)>"', '"</a>"'), array('',''), $m[$i]);
  //echo "Product Title" . $product_title . "<br>";
- echo "Product Price" . $product_price . "<br>";
+// echo "Product Price" . $product_price . "<br>";
  //echo preg_replace($Rules, $Replace, $r[$i]);
- echo "Product Title: " . strip_tags($r[$i]);
+ echo "Product Title: " . strip_tags($r[$i]) . "<br>";
+ echo "Product Price:"  . strip_tags($m[$i]) . "<br>";
  
  
  
