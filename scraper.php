@@ -19,6 +19,6 @@ for($i=0;$i<=$max_loop;$i++){
  $m = $dom->find("li.lvprice");
  //echo strip_tags($r[0]). "<br>";
  echo "Product Title :" . $r[$i] . "\n";
- echo "Product Price: " . $m[0] . "<br>"
+ echo "Product Price: " . $m[0] . "<br>";
 }
 ?>
