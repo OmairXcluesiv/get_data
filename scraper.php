@@ -16,7 +16,7 @@ for($i=0;$i<=$max_loop;$i++){
  $r = $dom->find("a.vip");
  $m = $dom->find("li.lvprice");
 
- if($r[$i]  || $m[$i] !=""){ $count++}
+ if($r[$i]  || $m[$i] !=""){ $count++;}
  echo "Product Title: " . strip_tags($r[$i]) . "\n";
  str_replace(' ', '', $old_str);
  $p_text = strip_tags($m[$i]);
