@@ -18,6 +18,6 @@ for($i=0;$i<=$max_loop;$i++){
  
  $r = $dom->find("a.vip");
  //echo strip_tags($r[0]). "<br>";
- echo $r[$i];
+ echo $r[$i] . "<br>";
 }
 ?>
