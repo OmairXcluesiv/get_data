@@ -19,8 +19,13 @@ for($i=0;$i<=$max_loop;$i++){
  //*[contains(@class, '$classname')]
  
  $r = $dom->find("a.vip['title']");
- $str = $r;
-echo html_entity_decode($str);
+ 
+echo strip_tags($r);
+echo "\n";
+
+// Allow <p> and <a>
+echo strip_tags($r, '<p><a>');
+ 
 // print $r[0]->plaintext. "<br>";
 
 
