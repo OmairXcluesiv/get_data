@@ -1,15 +1,17 @@
 <?
 
-require 'scraperwiki.php';
-require 'scraperwiki/simple_html_dom.php';
-
-$scraper = scraperwiki::scrap("https://www.olx.com.pk/cars/");
-
-$scraper_obj = new simple_html_dom();
-
-$scraper_obj->load($scraper);
-
-print_r($scraper_obj->find("h3 [class='large lheight20 margintop10'] a"));
+error_reporting(-1);
+require_once 'vendor/autoload.php';
+require_once 'src/InstagramScraper.php';
+use InstagramScraper\Instagram;
+try {
+//    $medias = Instagram::getMedias('kevin', 1497);
+//    echo json_encode($medias[1497]);
+    $media = Instagram::getMediaByCode('BL0k1EXhElI');
+    echo json_encode($media);
+} catch (\Exception $ex) {
+    print_r($ex);
+}
 
 
 
