@@ -14,10 +14,11 @@ for($i=0;$i<=$max_loop;$i++){
  $dom = new simple_html_dom();
  $dom->load($html);
  //$r = $dom->find("h3.lvtitle");
- //*[contains(@class, '$classname')]
- 
+ //*[contains(@class, '$classname')] 
  $r = $dom->find("a.vip");
  //echo strip_tags($r[0]). "<br>";
  echo $r[$i] . "\n";
+ 
+echo "<br><br><br>";
 }
 ?>
