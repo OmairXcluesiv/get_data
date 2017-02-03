@@ -62,10 +62,10 @@ for($i=0;$i<=$max_loop;$i++){
  echo "Product Title: " . strip_tags($r[$i]) . "\n";
  str_replace(' ', '', $old_str);
  $p_text = strip_tags($m[$i]);
- $no_ws = str_replace(' ','', $p_text );
+ $no_ws =  preg_replace('/\s+/', '', $p_text);
  echo "Product Price:"  . $no_ws . "\n\n\n\n\n";
  
  
- 
+
 }
 ?>
